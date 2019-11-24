@@ -1,0 +1,31 @@
+{
+  "name": "MerlinGuide",
+  "version": "1.0.0",
+  "description": "Get second opinion from the expert in the field",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JangkarBumi/MerlinGuide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JangkarBumi/MerlinGuide/issues"
+  },
+  "homepage": "https://github.com/JangkarBumi/MerlinGuide#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "express-validator": "^6.3.0",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.12",
+    "request": "^2.88.0"
+  }
+}
