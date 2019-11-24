@@ -1,9 +1,22 @@
-const express = require('express')
+const express = require('express');
+require('dotenv').config();
+const app = express();
+const connectDB = require('./db');
 
-const app = express()
+// Connect Database
+connectDB();
 
-app.get('/', (req, res) => res.send('API Running')) 
+// Init Middleware
+app.use(express.json({ extended: false }));
 
-const PORT = process.env.PORT || 5000
+app.get('/', (req, res) => res.send('API Running'));
 
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
+// Define routes
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/tutors', require('./routes/api/tutors'));
+app.use('/api/tutorauth', require('./routes/api/tutorAuth'));
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`Server Running on port ${PORT}`));
